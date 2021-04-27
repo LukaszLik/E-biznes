@@ -1,0 +1,60 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET           /                    controllers.HomeController.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
+
+# user
+POST          /user                controllers.UserController.addUser()
+GET           /user/:id            controllers.UserController.getUser(id: Long)
+DELETE        /user/:id            controllers.UserController.delete(id: Long)
+PUT           /user/:id            controllers.UserController.updateUser(id: Long)
+
+# product
+POST          /product             controllers.ProductController.addProduct()
+GET           /product/:id         controllers.ProductController.getProduct(id: Long)
+DELETE        /product/:id         controllers.ProductController.delete(id: Long)
+PUT           /product/:id         controllers.ProductController.updateProduct(id: Long)
+
+# cart
+POST          /cart                controllers.CartController.addCart()
+GET           /cart/:id            controllers.CartController.getCart(id: Long)
+DELETE        /cart/:id            controllers.CartController.deleteCart(id: Long)
+PUT           /cart/:id            controllers.CartController.updateCart(id: Long)
+
+# item review
+POST          /itemreview                controllers.ItemReviewController.addItemReview()
+GET           /itemreview/:id         controllers.ItemReviewController.getItemReview(id: Long)
+DELETE        /itemreview/:id         controllers.ItemReviewController.deleteItemReview(id: Long)
+PUT           /itemreview/:id         controllers.ItemReviewController.updateItemReview(id: Long)
+
+# item score
+POST          /itemscore             controllers.ItemScoreController.addItemScore()
+GET           /itemscore/:id         controllers.ItemScoreController.getItemScore(id: Long)
+DELETE        /itemscore/:id         controllers.ItemScoreController.deleteItemScore(id: Long)
+PUT           /itemscore/:id         controllers.ItemScoreController.updateItemScore(id: Long)
+
+# login
+POST          /login                controllers.LoginController.login()
+POST          /logout               controllers.LoginController.logout(id: Long)
+
+# order
+POST          /order             controllers.OrderController.addOrder()
+GET           /order/:id         controllers.OrderController.getOrder(id: Long)
+DELETE        /order/:id         controllers.OrderController.delete(id: Long)
+PUT           /order/:id         controllers.OrderController.updateOrder(id: Long)
+# payment
+POST          /payment             controllers.PaymentController.addPayment()
+GET           /payment/:id         controllers.PaymentController.getPayment(id: Long)
+DELETE        /payment/:id         controllers.PaymentController.deletePayment(id: Long)
+PUT           /payment/:id         controllers.PaymentController.updatePayment(id: Long)
+# record in cart
+POST          /record                controllers.RecordInCartController.addRecordInCart()
+GET           /record/:id            controllers.RecordInCartController.getRecordInCart(id: Long)
+DELETE        /record/:id            controllers.RecordInCartController.deleteRecordInCart(id: Long)
+PUT           /record/:id            controllers.RecordInCartController.updateRecordInCart(id: Long)
